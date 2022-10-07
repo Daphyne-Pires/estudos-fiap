@@ -27,7 +27,7 @@ const mudaTitulo2 = function (target, novoTitulo){
 
 };
 
-//mudaTitulo2("h1", "Trocando o subtitulo");
+mudaTitulo2("h1", "Trocando o titulo");
 
 //Arrow Function - É uma função criada no ES6 ou Es2015.
 //não existe o this dentro de uma arrow function.

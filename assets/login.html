@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco com Conta Digital, Cartão sem tarifa e mais | C6 bank</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -30,62 +30,70 @@
         <button class="top-button">abra sua conta</button>
     </header>
     <section class="full-banner-form">
+        <div class="container-login">
+            <form class="form-login" method="post">
 
-<div class="container-login">
-   <form class="form-login" method="post">
-      <label for="login">
-        CPF*:
-        <input required type="text" name="login" id="login" placeholder="Digite o CPF" oninvalid="this.setCustomValidity('Preencha o campo CPF')" oninput="this.setCustomValidity('')"/>
-      </label>
-      
-      <label for="password">
-    Senha*:
-        <input type="password" name="password" required id="password" placeholder="Digite a senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="A senha deve conter, ao menos uma letra minúscula, uma letra maiúscula, um número e pelo menos 8 caracteres"/>
-      </label>
-    <button type="submit">continuar</button>
-    <p><a href="#">Esqueci minha senha</a></p>
-    <p><a href="#">Ainda não sou cliente</a></p>
-   </form>
-</div>
+                <label for="login">
+                    CPF*:
+                    <input required type="text" name="login" id="login" placeholder="Digite o CPF"
+                        oninvalid="this.setCustomValidity('Preencha o campo CPF')"
+                        oninput="this.setCustomValidity('')" />
+
+                </label>
+                <label for="password">
+                    Senha*:
+                    <input type="password" name="password" required id="password" placeholder="Digite a senha"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="A senha deve conter, ao menos uma letra minúscula, uma letra maiúscula, um número e pelo menos 8 caracteres" />
+                </label>
+
+                <button type="submit">continuar</button>
+                <p><a href="#">Esqueci minha senha ></a></p>
+                <p><a href="#">Ainda não sou cliente ></a></p>
+            </form>
+        </div>
     </section>
     <footer>
 
-    </footer>   
-    <script>     
+    </footer>
+    <script>
+        const header = document.querySelector(".top-site");
+        const button = document.querySelector(".top-button");
+        header.style.background = "none";
+        button.classList.add("disabled");
+        // margin-bottom
+        // marginBottom
         //janela e site
         //window e document
-        //janela é o browser/navegador, site é o programa
 
-        //evento chamado scroll. Javascript é uma linguagem dirigida a eventos
-        //Criamos uma escuta para um evento.
-        //if scrollY for menor que 100px remover a class disabled
-    const elHeader = document.querySelector(".top-site");
-    const elButton = document.querySelector(".top-button");
-    const elBody = document.querySelector("body");
-    elHeader.style.background = "none";
-    elButton.classList.add("disabled");
-    window.addEventListener("scroll", (e) => {
-      const positionScroll = window.scrollY;
-      if (positionScroll <= 100) {
-        elHeader.style.background = "none";
-        elButton.classList.add("disabled");
-        elHeader.classList.remove("text-header");
-      } else if (positionScroll <= 945) {
-        elHeader.style.background = "#fff";
-        elButton.classList.remove("disabled");
-        elHeader.classList.remove("text-header");
-      } else {
-        elHeader.style.background = "#000"
-        elHeader.classList.add("text-header");
-      }
-    });
-  
-        //A forma mais simples de criar uma função, é uma função de seta/ arrow function.
-        // const msg = nome_time => alert(nome_time);
-        //msg('Santos');
-        // (nome_time) => {corpo da função};
+        //evento chamado scroll. JavaScript é uma linguagem dirigida a eventos
+        //Criamos uma escuta para um evento. 
+
+        window.addEventListener('scroll', (e) => {
+            console.log(window.scrollY);
+
+            if (scrollY < 100) {
+                header.style.background = "none";
+                button.classList.add("disabled");
+            } else {
+                header.style.background = "#fff";
+                button.classList.remove("disabled");
+            }
+
+        });
+
+//teremos aula sobre funções em JavaScript.
+//A forma mais simples de criar uma função, é uma função de seta.
+// arrow function
+//   const msg = nome_time => alert(nome_time);
+// msg('Corinthians');
+//  (nome_time) => { corpo da função}
+// ()=>{}
+
+
     </script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
